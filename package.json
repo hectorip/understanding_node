@@ -1,0 +1,11 @@
+{
+  "name": "understanding_node",
+  "version": "1.0.0",
+  "description": "Probando los básicos de node para entender el funcionamiento interno",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "HectorIP",
+  "license": "ISC"
+}
