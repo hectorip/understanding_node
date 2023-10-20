@@ -5,22 +5,7 @@ import http from "node:http";
 // Importamos el módulo http
 // const http = require('node:http');
 import quotes from "../priv/quotes.js";
-import { createHash } from "node:crypto";
-
-function getVanityName(name) {
-  // Usando sha256 para obtener un nombre de vanidad
-  const hash = createHash("sha256");
-  let vanityName = hash
-    .copy()
-    .update(Math.random().toString())
-    .digest("base64");
-  while (!vanityName.startsWith(name)) {
-    vanityName = hash.copy().update(Math.random().toString()).digest("base64");
-    console.log(vanityName);
-  }
-  return vanityName;
-}
-
+import { getVanityName } from "../priv/utils.js";
 Array.prototype.random = function () {
   return this[Math.floor(Math.random() * this.length)];
 };
