@@ -1,5 +1,16 @@
+## Ejercicio
+
+Clona el repositorio https://github.com/hectorip/understanding_node y sigue las instrucciones del README.md.
+
 ## Lecturas y recursos extra para entender concurrencia 
 
-- Plática del creador de GoLang: Concurrency is not parallelism -https://www.youtube.com/watch?v=oV9rvDllKEg
+- Plática del creador de GoLang: Concurrency is not parallelism - https://www.youtube.com/watch?v=oV9rvDllKEg
 - Diferencia entre concurrencia y paralelismo: https://blog.thedojo.mx/2019/04/17/la-diferencia-entre-concurrencia-y-paralelismo.html 
 - Event Loop in NodeJS— Visualized: https://medium.com/@mmoshikoo/event-loop-in-nodejs-visualized-235867255e81
+- The Battle of Event Loops: https://assets.ctfassets.net/nn534z2fqr9f/6DqsijpIFGq2QorhLsC1EZ/f5eca142f52f68fd5efc351eba3b853f/The_battle_of_the_event_loops_copy_2.pdf
+- Modelos de concurrencia y acceso a la memoria ilustrados: https://www.adit.io/posts/2013-05-15-Locks,-Actors,-And-STM-In-Pictures.html#locks
+
+
+## Profundizar más en cualquier tecnología
+
+- Capítulo "Dig Deeper" del libro "Apprenticeship Patterns", lo encuentras en el drive con el nombre `Dig Deeper.pdf`.
