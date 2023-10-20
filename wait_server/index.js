@@ -5,8 +5,8 @@ import http from "node:http";
 // Importamos el módulo http
 // const http = require('node:http');
 import quotes from "../priv/quotes.js";
-import cluster from "node:cluster";
 import { getVanityName } from "../priv/utils.js";
+import cluster from "node:cluster";
 
 Array.prototype.random = function () {
   return this[Math.floor(Math.random() * this.length)];
@@ -25,10 +25,19 @@ if (cluster.isPrimary) {
   // Creamos el servidor
   const server = http.Server(async (req, res) => {
     console.log(`Petición recibida por proceso ${process.pid}`);
-    // await new Promise((resolve) => setTimeout(resolve, 5_000));
 
+    // Esperamos 10 segundos
+
+    let vanityName = "";
     const difficulty = req.url.split("/").pop();
-    console.log(`URI: ${difficulty}`);
+
+    // Queremos hacer esperar al usuario entre 1 y 5 segundos para que no abuse
+    await new Promise((resolve) =>
+      setTimeout(resolve, Math.random() * 10_000 + 1_000)
+    ).then(() => {
+      // Esto corre en el event loop
+      vanityName = getVanityName(difficulty);
+    });
 
     res.writeHead(200, {
       "Content-Type": "application/json",
@@ -38,7 +47,7 @@ if (cluster.isPrimary) {
       JSON.stringify({
         ...quotes.random(),
         process: process.pid,
-        vanityName: getVanityName(difficulty),
+        vanityName,
       })
     );
     console.log(`Respuesta enviada por proceso ${process.pid}`);

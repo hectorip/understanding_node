@@ -1,0 +1,5 @@
+## Lecturas y recursos extra para entender concurrencia 
+
+- Plática del creador de GoLang: Concurrency is not parallelism -https://www.youtube.com/watch?v=oV9rvDllKEg
+- Diferencia entre concurrencia y paralelismo: https://blog.thedojo.mx/2019/04/17/la-diferencia-entre-concurrencia-y-paralelismo.html 
+- Event Loop in NodeJS— Visualized: https://medium.com/@mmoshikoo/event-loop-in-nodejs-visualized-235867255e81
